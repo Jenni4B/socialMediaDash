@@ -3,6 +3,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
+
 const WelcomePage = () => {
     return (
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -20,7 +21,7 @@ const WelcomePage = () => {
           </div>
           <footer className="mt-10">
             <p className="text-sm text-gray-500">
-              &copy; 2023 Social Media Dashboard. All rights reserved.
+              &copy; 2025 Social Media Dashboard. All rights reserved.
             </p>
           </footer>
         </main>
