@@ -1,7 +1,9 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import React from 'react';
+import loginPage from './loginPage';
+import signUpPage from './signUpPage';
 
 const WelcomePage = () => {
 
@@ -14,16 +16,21 @@ const WelcomePage = () => {
       <p className="mt-2 text-lg text-center">Get started by signing up or logging in!</p>
 
       <div className="mt-6 flex space-x-4">
-        <button
-          className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
-        >
-          Sign Up
-        </button>
-        <button
-          className="bg-gray-300 text-gray-800 px-6 py-2 rounded hover:bg-gray-400"
-        >
-          Log In
-        </button>
+        <Link href="/signupPage">
+          <button
+            className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+          >
+            Sign Up
+          </button>
+        </Link>
+
+        <Link href="/loginPage">
+          <button
+            className="bg-gray-300 text-gray-800 px-6 py-2 rounded hover:bg-gray-400"
+          >
+            Log In
+          </button>
+        </Link>
       </div>
 
       <footer className="mt-10 text-sm text-gray-500 text-center">
