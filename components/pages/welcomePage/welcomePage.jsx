@@ -2,10 +2,9 @@
 
 import Link from 'next/link';
 import React from 'react';
-import loginPage from './loginPage';
-import signUpPage from './signUpPage';
 
 const WelcomePage = () => {
+  // Use state to handle client-side rendering for year
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-8">
@@ -16,25 +15,17 @@ const WelcomePage = () => {
       <p className="mt-2 text-lg text-center">Get started by signing up or logging in!</p>
 
       <div className="mt-6 flex space-x-4">
-        <Link href="/signupPage">
-          <button
-            className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
-          >
-            Sign Up
-          </button>
+        <Link href="/signUpPage.jsx" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
+          Sign Up
         </Link>
 
-        <Link href="/loginPage">
-          <button
-            className="bg-gray-300 text-gray-800 px-6 py-2 rounded hover:bg-gray-400"
-          >
-            Log In
-          </button>
+        <Link href="/loginPage.jsx" className="bg-gray-300 text-gray-800 px-6 py-2 rounded hover:bg-gray-400">
+          Log In
         </Link>
       </div>
 
       <footer className="mt-10 text-sm text-gray-500 text-center">
-        &copy; 2025 Social Media Dashboard. All rights reserved.
+        &copy; Social Media Dashboard. All rights reserved.
       </footer>
     </main>
   );
