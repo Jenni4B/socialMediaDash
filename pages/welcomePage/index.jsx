@@ -4,8 +4,6 @@ import Link from 'next/link';
 import React from 'react';
 
 const WelcomePage = () => {
-  // Use state to handle client-side rendering for year
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-8">
       <h1 className="text-4xl font-bold text-center">Welcome to Social Media Dashboard</h1>
@@ -15,11 +13,11 @@ const WelcomePage = () => {
       <p className="mt-2 text-lg text-center">Get started by signing up or logging in!</p>
 
       <div className="mt-6 flex space-x-4">
-        <Link href="/signUpPage.jsx" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
+        <Link href="/signUpPage" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
           Sign Up
         </Link>
 
-        <Link href="/loginPage.jsx" className="bg-gray-300 text-gray-800 px-6 py-2 rounded hover:bg-gray-400">
+        <Link href="/loginPage" className="bg-gray-300 text-gray-800 px-6 py-2 rounded hover:bg-gray-400">
           Log In
         </Link>
       </div>
