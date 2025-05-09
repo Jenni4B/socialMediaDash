@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import React from 'react';
 
-const WelcomePage = () => {
+const WelcomePage: React.FC = () => {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-3">
       <h1 className="text-4xl font-bold text-center">Welcome to Social Media Dashboard</h1>
