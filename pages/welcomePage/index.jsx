@@ -5,7 +5,7 @@ import React from 'react';
 
 const WelcomePage = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-8">
+    <main className="flex min-h-screen flex-col items-center justify-center p-3">
       <h1 className="text-4xl font-bold text-center">Welcome to Social Media Dashboard</h1>
       <p className="mt-4 text-lg text-center max-w-xl">
         Your one-stop solution for managing all your social media accounts.

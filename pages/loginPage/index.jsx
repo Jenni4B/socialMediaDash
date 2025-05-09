@@ -1,10 +1,8 @@
 import React from "react";
 
-import { useState, useEffect } from "react";
-
 const loginPage = () => {
     return (
-        <div className="flex min-h-screen flex-col items-center justify-center p-8">
+        <div className="flex min-h-screen flex-col items-center justify-center p-3">
             <h1 className="text-4xl font-bold">Login to Your Account</h1>
             <p className="mt-4 text-lg">
                 Please enter your credentials to access your dashboard.
