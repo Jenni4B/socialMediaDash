@@ -1,6 +1,7 @@
 'use client';
 
 import React, { FormEvent } from "react";
+import NaviBar from "../../components/common/naviBar";
 
 const LoginPage: React.FC = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -11,6 +12,7 @@ const LoginPage: React.FC = () => {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-3">
+      <NaviBar />
       <h1 className="text-4xl font-bold text-center">Login to Your Account</h1>
       <p className="mt-4 text-lg text-center max-w-xl">
         Please enter your credentials to access your dashboard.

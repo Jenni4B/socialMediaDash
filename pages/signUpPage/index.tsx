@@ -1,6 +1,7 @@
 'use client';
 
 import React, { FormEvent } from "react";
+import NaviBar from "../../components/common/naviBar";
 
 const SignUpPage: React.FC = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -11,6 +12,7 @@ const SignUpPage: React.FC = () => {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-3">
+      <NaviBar />
       <h1 className="text-4xl font-bold text-center">Create Your Account</h1>
       <p className="mt-4 text-lg text-center max-w-xl">
         Please fill in the details to create your account.

@@ -3,6 +3,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const NaviBar = () => {
     const router = useRouter();
@@ -25,7 +26,11 @@ const NaviBar = () => {
 
     return (
         <nav className="flex justify-between items-center p-1 bg-gray-800 text-white">
-            <div className="text-xl font-bold">Social Media Dashboard</div>
+
+            <div className="text-xl font-bold">
+                <Link href="/welcomePage">Social Media Dashboard</Link>
+            </div>
+
             <div className="flex space-x-10">
                 {isLoggedIn ? (
                     <button onClick={handleLogout} className="btn btn-secondary">Logout</button>
