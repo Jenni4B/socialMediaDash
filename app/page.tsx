@@ -1,5 +1,5 @@
 import React from "react";
-import WelcomePage from "../pages/welcomePage";
+import WelcomePage from "./welcomePage";
 import NaviBar from "../components/common/naviBar";
 
 const Home: React.FC = () => {
