@@ -3,6 +3,7 @@
 import React, { FormEvent } from "react";
 import NaviBar from "../../components/common/naviBar";
 
+
 const LoginPage: React.FC = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     //  05/9/2025 more form logic will be here, but that will be handled by the a context provider soon
