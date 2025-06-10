@@ -16,8 +16,6 @@ const LoginPage: React.FC = () => {
     e.preventDefault();
     logIn(e.target, () => router.push("/dashboard"));
     console.log("Logging in...");
-
-    // It works but it's not redirecting to the dashboard...6/10/2025 10:22 AM
   };
 
   return (
