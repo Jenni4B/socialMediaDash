@@ -21,18 +21,21 @@ const SignUpPage: React.FC = () => {
         <input
           type="text"
           placeholder="Username"
+          name="username"
           className="w-full p-3 border border-gray-300 rounded"
           required
         />
         <input
           type="email"
           placeholder="Email"
+          name="email"
           className="w-full p-3 border border-gray-300 rounded"
           required
         />
         <input
           type="password"
           placeholder="Password"
+          name="password"
           className="w-full p-3 border border-gray-300 rounded"
           required
         />
