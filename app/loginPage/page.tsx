@@ -1,6 +1,6 @@
 'use client';
 
-import logIn from "../auth/logIn";
+import logIn from "../auth/login/logIn";
 import React, { FormEvent } from "react";
 import NaviBar from "../../components/common/naviBar";
 import { useRouter } from "next/navigation";

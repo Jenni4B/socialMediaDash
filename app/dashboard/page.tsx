@@ -1,40 +1,56 @@
 'use client';
 
-import React from "react";
+import React, { useState } from 'react';
+import DashboardHeader from './components/DashboardHeader';
+import DashboardFilters from './components/DashboardFilters';
+import AnalyticsChart from './components/AnalyticsChart';
+import KeyMetrics from './components/KeyMetrics';
+import TopPosts from './components/TopPosts';
 
-import { useState, useEffect } from "react";
+import { analyticsData } from '../dummyData/analytics';
+import { topPosts } from '../dummyData/topPosts';
 
-const DashboardPage = () => {
-    const [posts, setPosts] = useState([]);
-    
-    // replace with a real API call to fetch posts from social media account(s)
-    // useEffect(() => {
-    //     fetch("https://jsonplaceholder.typicode.com/posts")
-    //     .then((response) => response.json())
-    //     .then((data) => setPosts(data));
-    // }, []);
+const Dashboard = () => {
+  const [timeFrame, setTimeFrame] = useState('Last 3 Months');
+  const [services, setServices] = useState('All');
+  const [posts, setPosts] = useState('All');
+  const [isTimeFrameOpen, setIsTimeFrameOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isPostsOpen, setIsPostsOpen] = useState(false);
 
-    return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-            <h1 className="text-4xl font-bold">Welcome to the Dashboard</h1>
-            <p className="mt-4 text-lg">
-                Here you can manage your social media accounts and view analytics.
-            </p>
-            <p className="mt-2 text-lg">
-                Get started by connecting your accounts!
-            </p>
-    
-            <div className="mt-6">
-                <button className="btn btn-primary mr-4">Connect Accounts</button>
-                <button className="btn btn-secondary">View Analytics</button>
-            </div>
-            <footer className="mt-10">
-                <p className="text-sm text-gray-500">
-                    &copy; 2025 Social Media Dashboard. All rights reserved.
-                </p>
-            </footer>
-        </main>
-    );
-}
+  const timeFrameOptions = ['Last 3 Months', 'Last 6 Months', 'Last Year', 'All Time'];
+  const servicesOptions = ['All', 'Instagram', 'Twitter', 'LinkedIn', 'TikTok', 'YouTube', 'DeviantArt'];
+  const postsOptions = ['All', 'Most Recent', 'Most Popular', 'Most Engaged'];
 
-export default DashboardPage;
+  return (
+    <div className="min-h-screen bg-gray-900 text-white p-6">
+      <div className="max-w-7xl mx-auto">
+        <DashboardHeader />
+        <DashboardFilters
+          timeFrame={timeFrame}
+          setTimeFrame={setTimeFrame}
+          isTimeFrameOpen={isTimeFrameOpen}
+          setIsTimeFrameOpen={setIsTimeFrameOpen}
+          timeFrameOptions={timeFrameOptions}
+          services={services}
+          setServices={setServices}
+          isServicesOpen={isServicesOpen}
+          setIsServicesOpen={setIsServicesOpen}
+          servicesOptions={servicesOptions}
+          posts={posts}
+          setPosts={setPosts}
+          isPostsOpen={isPostsOpen}
+          setIsPostsOpen={setIsPostsOpen}
+          postsOptions={postsOptions}
+        />
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+          <AnalyticsChart data={analyticsData} />
+          <KeyMetrics />
+        </div>
+        <TopPosts posts={topPosts} />
+      </div>
+    </div>
+  );
+};
+
+export default Dashboard;
