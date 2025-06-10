@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import React from 'react';
+import NaviBar from '../../components/common/naviBar';
 
 const WelcomePage: React.FC = () => {
   return (

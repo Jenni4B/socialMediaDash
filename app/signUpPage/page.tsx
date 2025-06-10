@@ -42,6 +42,9 @@ const SignUpPage: React.FC = () => {
         <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
           Sign Up
         </button>
+        <p className="text-sm text-gray-500 text-center mt-2">
+          Have an account? <a href="/loginPage" className="text-blue-600 hover:underline">Login Here</a>.
+        </p>
       </form>
       <footer className="mt-10 text-sm text-gray-500 text-center">
         &copy; 2025 Social Media Dashboard. All rights reserved.

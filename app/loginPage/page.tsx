@@ -50,7 +50,7 @@ const LoginPage: React.FC = () => {
           Login
         </button>
         <p className="text-sm text-gray-500 text-center mt-2">
-          Don&#39;t have an account? <a href="/register" className="text-blue-600 hover:underline">Register here</a>.
+          Don&#39;t have an account? <a href="/signUpPage" className="text-blue-600 hover:underline">Register here</a>.
         </p>
       </form>
       <footer className="mt-10 text-sm text-gray-500 text-center">

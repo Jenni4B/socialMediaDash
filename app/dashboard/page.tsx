@@ -1,12 +1,17 @@
 'use client';
 
+// Libraries
 import React, { useState } from 'react';
+
+// Components
+import NaviBar from '../../components/common/naviBar';
 import DashboardHeader from './components/DashboardHeader';
 import DashboardFilters from './components/DashboardFilters';
 import AnalyticsChart from './components/AnalyticsChart';
 import KeyMetrics from './components/KeyMetrics';
 import TopPosts from './components/TopPosts';
 
+// Import dummy data
 import { analyticsData } from '../dummyData/analytics';
 import { topPosts } from '../dummyData/topPosts';
 
@@ -25,6 +30,7 @@ const Dashboard = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white p-6">
       <div className="max-w-7xl mx-auto">
+        <NaviBar />
         <DashboardHeader />
         <DashboardFilters
           timeFrame={timeFrame}

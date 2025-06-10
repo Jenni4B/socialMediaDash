@@ -10,7 +10,7 @@ const NaviBar = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     useEffect(() => {
-        // Check if the user is logged in (this is just a placeholder, implement your own logic)
+        // Check if the user is logged in (this is just a placeholder)
         const token = localStorage.getItem("token");
         if (token) {
             setIsLoggedIn(true);
@@ -28,12 +28,15 @@ const NaviBar = () => {
         <nav className="flex justify-between items-center p-1 bg-gray-800 text-white">
 
             <div className="text-xl font-bold">
-                <Link href="/welcomePage">Social Media Dashboard</Link>
+                <Link href="/">Social Media Dashboard</Link>
             </div>
 
             <div className="flex space-x-10">
                 {isLoggedIn ? (
+                    <button onClick={() => router.push("/dashboard")} className="btn btn-primary">Dashboard</button>,
+                    <button onClick={() => router.push("/settings")} className="btn btn-secondary">settings</button>,
                     <button onClick={handleLogout} className="btn btn-secondary">Logout</button>
+                    
                 ) : (
                     <button onClick={() => router.push("/loginPage")} className="btn btn-primary">Login</button>
                 )}
