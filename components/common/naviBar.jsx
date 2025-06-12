@@ -34,7 +34,7 @@ const NaviBar = () => {
             <div className="flex space-x-10">
                 {isLoggedIn ? (
                     <button onClick={() => router.push("/dashboard")} className="btn btn-primary">Dashboard</button>,
-                    <button onClick={() => router.push("/settings")} className="btn btn-secondary">settings</button>,
+                    <button onClick={() => router.push("/profile")} className="btn btn-secondary">Profile</button>,
                     <button onClick={handleLogout} className="btn btn-secondary">Logout</button>
                     
                 ) : (
